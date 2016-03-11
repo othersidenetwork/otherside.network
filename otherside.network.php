@@ -3,7 +3,7 @@
 Plugin Name:       Tools from the Other Side
 Plugin URI:        https://github.com/othersidenetwork/otherside.network
 Description:       Tools and widgets for members of The Other Side Podcast Network.
-Version:           1.0.1
+Version:           1.0.2
 Require WP:        4.4
 Require PHP:       5.3.0
 Author:            Yannick Mauray
@@ -137,8 +137,14 @@ function otherside_banner() {
 	<div class="otherside-network-banner-dropdown">
 		<span><?php echo _e($category->name, 'otherside_plugin_domain'); ?></span>
 		<div class="otherside-network-banner-category">
-			<?php foreach ($category->podcasts as $key => $podcast) {?>
-			<p><a href="<?php echo $config->podcasts->$podcast->url; ?>"><?php echo $config->podcasts->$podcast->name; ?></a></p>
+			<?php foreach ($category->podcasts as $key => $podcast) {
+			$url = $config->podcasts->$podcast->url;
+			$url = add_query_arg(array(
+				'utm_campaign' => 'syndication',
+				'utm_source' => sanitize_title(get_bloginfo('name', 'display')),
+				'utm_medium' => 'network'
+			), $url);?>
+			<p><a href="<?php echo $url; ?>"><?php echo $config->podcasts->$podcast->name; ?></a></p>
 			<?php } ?>
 		</div>
 	</div>
