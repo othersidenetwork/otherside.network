@@ -125,31 +125,24 @@ add_action('widgets_init', 'otherside_load_widget');
 
 
 function otherside_banner() {
+	$config = file_get_contents(plugin_dir_path(__FILE__) . "otherside.network.json");
+	if ($config === false) {
+		return;
+	}
+	$config = json_decode($config);
 ?>
 <div id="otherside-network-banner">
 	<a href="http://otherside.network">The Other Side Podcast Network :</a>
+	<?php foreach ($config->categories as $key => $category) {?>
 	<div class="otherside-network-banner-dropdown">
-		<span><?php echo _e('Discussion', 'otherside_plugin_domain'); ?></span>
+		<span><?php echo _e($category->name, 'otherside_plugin_domain'); ?></span>
 		<div class="otherside-network-banner-category">
-			<p><a href="http://duffercast.org/">Duffercast</a></p>
-			<p><a href="http://unseenstudio.co.uk/category/tuxjam-ogg/">Tuxjam</a></p>
+			<?php foreach ($category->podcasts as $key => $podcast) {?>
+			<p><a href="<?php echo $config->podcasts->$podcast->url; ?>"><?php echo $config->podcasts->$podcast->name; ?></a></p>
+			<?php } ?>
 		</div>
 	</div>
-	<div class="otherside-network-banner-dropdown">
-		<span><?php echo _e('Music', 'otherside_plugin_domain'); ?></span>
-		<div class="otherside-network-banner-category">
-			<p><a href="http://unseenstudio.co.uk/category/ccjam-mp3/">CCJam</a></p>
-			<p><a href="http://www.euterpia-radio.fr">Euterpia&nbsp;Radio</a></p>
-			<p><a href="http://open-country.co.uk">Open&nbsp;Country</a></p>
-			<p><a href="http://thebugcast.org">The&nbsp;Bugcast</a></p>
-		</div>
-	</div>
-	<div class="otherside-network-banner-dropdown">
-		<span><?php echo _e('Technology', 'otherside_plugin_domain'); ?></span>
-		<div class="otherside-network-banner-category">
-			<p><a href="http://unseenstudio.co.uk/category/tuxjam-ogg/">Tuxjam</a></p>
-		</div>
-	</div>
+	<?php } ?>
 </div>
 <?php
 }

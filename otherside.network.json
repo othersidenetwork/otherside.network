@@ -1,0 +1,44 @@
+{
+	"podcasts": {
+		"ccjam": {
+			"name": "CCJam",
+			"url": "http://unseenstudio.co.uk/category/ccjam-mp3"
+		},
+		"duffercast": {
+			"name": "Duffercast",
+			"url": "http://duffercast.org"
+		},
+		"euterpia-radio": {
+			"name": "Euterpia Radio",
+			"url": "http://www.euterpia-radio.fr"
+		}, 
+		"open-country": {
+			"name": "Open Country",
+			"url": "http://open-country.co.uk"
+		}, 
+		"the-bugcast": {
+			"slug": "the-bugcast",
+			"name": "The Bugcast",
+			"url": "http://thebugcast.org"
+		}, 
+		"tuxjam": {
+			"slug": "tuxjam",
+			"name": "Tuxjam",
+			"url": "http://unseenstudio.co.uk/category/tuxjam-ogg"
+		}
+	},
+	"categories": [
+		{
+			"name": "Discussion",
+			"podcasts": ["duffercast", "tuxjam"]
+		},
+		{
+			"name": "Music",
+			"podcasts": ["ccjam", "euterpia-radio", "open-country", "thebugcast"]
+		},
+		{
+			"name": "Technology",
+			"podcasts": ["tuxjam"]
+		}
+	]
+}
