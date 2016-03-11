@@ -1,19 +1,19 @@
 <?php
-/**
- * The main plugin file
- *
- * @package WordPress_Plugins
- * @subpackage otherside.network
- */
-
 /*
-Plugin Name: Tools from the Other Side
-Description: Tools and widgets for members of The Other Side Podcast Network.
-Plugin URI:  http://otherside.network/plugin
-Version:     1.0.0
-Author:      Yannick Mauray
-Author URI:  http://www.euterpia-radio.fr/
-License:	 GPL2
+Plugin Name:       Tools from the Other Side
+Plugin URI:        https://github.com/othersidenetwork/otherside.network
+Description:       Tools and widgets for members of The Other Side Podcast Network.
+Version:           1.0.0
+Require WP:        4.4
+Require PHP:       5.3.0
+Author:            Yannick Mauray
+Author URI:        https://github.com/ymauray
+License:           GNU General Public License v3
+License URI:       http://www.gnu.org/licenses/gpl-3.0.html
+Domain Path:       /languages
+Text Domain:       otherside_plugin_domain
+GitHub Plugin URI: https://github.com/othersidenetwork/otherside.network
+GitHub Branch:     master
 */
 
 class OtherSide_Members_Widget extends WP_Widget {
