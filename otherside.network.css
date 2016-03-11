@@ -1,0 +1,62 @@
+#otherside-network-banner {
+	width: 100%;
+	line-height: 28px;
+	font-family: sans-serif;
+	font-size: 12px;
+	background-color: black;
+	color: white;
+	padding: 0 3px;
+	margin-right: 10px;
+}
+
+#otherside-network-banner a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#otherside-network-banner > a:first-child {
+	font-weight: bold;
+}
+
+#otherside-network-banner .otherside-network-banner-dropdown {
+	position: relative;
+	display: inline-block;
+    cursor: pointer;
+}
+
+#otherside-network-banner .otherside-network-banner-dropdown span {
+	padding: 0 10px;
+}
+
+#otherside-network-banner .otherside-network-banner-category {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+}
+
+#otherside-network-banner .otherside-network-banner-category p {
+	margin: 0;
+	padding: 0 10px;
+}
+
+#otherside-network-banner .otherside-network-banner-dropdown:hover p:hover {
+	background-color: #febb2e;
+	transition-property: background-color;
+	transition-duration: .2s;
+}
+
+#otherside-network-banner .otherside-network-banner-category p:first-child {
+}
+
+#otherside-network-banner .otherside-network-banner-dropdown:hover {
+	background-color: #333;
+}
+
+#otherside-network-banner .otherside-network-banner-dropdown:hover .otherside-network-banner-category {
+    display: block;
+    background-color: #333;
+}
