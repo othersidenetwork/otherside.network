@@ -17,12 +17,10 @@
 			"url": "http://open-country.otherside.network"
 		}, 
 		"the-bugcast": {
-			"slug": "the-bugcast",
 			"name": "The Bugcast",
 			"url": "http://thebugcast.otherside.network"
 		}, 
 		"tuxjam": {
-			"slug": "tuxjam",
 			"name": "Tuxjam",
 			"url": "http://tuxjam.otherside.network"
 		}

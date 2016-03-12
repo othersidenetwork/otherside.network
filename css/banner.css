@@ -43,6 +43,12 @@
 	padding: 0 10px;
 }
 
+#otherside-network-banner .otherside-network-banner-category p a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
 #otherside-network-banner .otherside-network-banner-dropdown:hover p:hover {
 	background-color: #febb2e;
 	transition-property: background-color;
