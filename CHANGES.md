@@ -1,3 +1,6 @@
+#### 1.0.4
+* Fixed banner being 10px wider than the display area.
+
 #### 1.0.3
 * Fixed typo in JSON file.
 * Refactored code.

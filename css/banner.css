@@ -1,4 +1,5 @@
 #otherside-network-banner {
+	box-sizing: border-box;
 	width: 100%;
 	line-height: 28px;
 	font-family: sans-serif;
