@@ -23,16 +23,20 @@
 		"tuxjam": {
 			"name": "Tuxjam",
 			"url": "http://tuxjam.otherside.network"
+		},
+		"crivins": {
+			"name": "Crivins",
+			"url": "http://crivins.otherside.network"
 		}
 	},
 	"categories": [
 		{
 			"name": "Discussion",
-			"podcasts": ["duffercast", "tuxjam"]
+			"podcasts": ["duffercast", "crivins"]
 		},
 		{
 			"name": "Music",
-			"podcasts": ["ccjam", "euterpia-radio", "open-country", "the-bugcast"]
+			"podcasts": ["ccjam", "euterpia-radio", "open-country", "the-bugcast", "tuxjam"]
 		},
 		{
 			"name": "Technology",
