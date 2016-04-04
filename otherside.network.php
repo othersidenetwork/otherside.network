@@ -20,7 +20,7 @@ const JSON = "otherside.network.json";
 const REMOTE_JSON = "http://otherside.network/shows/json";
 
 $otherside_network_config = get_transient(JSON);
-if ($otherside_network_config === false) {
+if ($otherside_network_config === false || $otherside_network_config === "") {
     error_log("otherside.network: json transient not found, fetching live data from " . REMOTE_JSON . ".");
     $otherside_network_config = file_get_contents(REMOTE_JSON);
     set_transient(JSON, $otherside_network_config, 30 * MINUTE_IN_SECONDS);

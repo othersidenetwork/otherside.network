@@ -10,9 +10,9 @@ function otherside_banner() {
 	<a href="http://otherside.network">The Other Side Podcast Network :</a>
 	<?php foreach ($otherside_network_config_object->categories as $key => $category) {?>
 	<div class="otherside-network-banner-dropdown">
-		<span><?php echo _e($category->name, 'otherside_plugin_domain'); ?></span>
+		<span><?php echo __($category->name, 'otherside_plugin_domain'); ?></span>
 		<div class="otherside-network-banner-category">
-			<?php foreach ($category->podcasts as $key => $podcast) {
+			<?php foreach ($category->podcasts as $subkey => $podcast) {
 			$url = $otherside_network_config_object->podcasts->$podcast->url;
 			$url = add_query_arg(array(
 				'utm_campaign' => 'syndication',
