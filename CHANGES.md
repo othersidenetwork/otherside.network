@@ -1,3 +1,13 @@
+#### 1.0.7
+* Fetch JSON from live site
+* Store data in a 30-minute transient
+
+#### 1.0.6
+* More typos
+
+#### 1.0.5
+* Typo
+
 #### 1.0.4
 * Fixed banner being 10px wider than the display area.
 
