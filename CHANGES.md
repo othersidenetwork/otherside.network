@@ -1,3 +1,6 @@
+#### 1.0.7
+* Fixed recursion problem
+
 #### 1.0.6
 * Fetch JSON from live site
 * Store data in a 30-minute transient
