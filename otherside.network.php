@@ -18,7 +18,7 @@ GitHub Branch:     master
 
 const JSON = "otherside.network.json";
 const LOADING = "otherside.network.loading";
-const REMOTE_JSON = "http://er.loc/shows/json";
+const REMOTE_JSON = "http://otherside.network/shows/json";
 
 if (!is_admin() && !is_network_admin() && (get_transient(LOADING) == null)) {
     $otherside_network_config = get_transient(JSON);
