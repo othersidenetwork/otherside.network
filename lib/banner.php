@@ -30,6 +30,12 @@ function otherside_banner() {
 }
 
 add_action('wp_head', 'otherside_banner');
-wp_enqueue_style('otherside-banner', plugin_dir_url(__FILE__) . '../css/banner.css', false, '1.0', 'all');
+if ( !function_exists( 'otherside_enqueue_scripts_and_styles' ) ) {
+	function otherside_enqueue_scripts_and_styles() {
+		wp_enqueue_style('otherside-banner', plugin_dir_url(__FILE__) . '../css/banner.css', false, '1.0', 'all');
+	}
+}
+add_action( 'wp_enqueue_scripts', 'otherside_enqueue_scripts_and_styles' );
+
 
 ?>

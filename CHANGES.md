@@ -1,3 +1,6 @@
+#### 1.0.10
+* Fixed stylesheet inclusion, using correct wp_enqueue_script action.
+
 #### 1.0.7
 * Fixed recursion problem
 
