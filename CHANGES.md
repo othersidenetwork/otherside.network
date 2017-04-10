@@ -1,4 +1,7 @@
 #### 1.0.10
+* Completely redesigned the CSS (now using LESS) to make the banner responsive.
+
+#### 1.0.10
 * Fixed stylesheet inclusion, using correct wp_enqueue_script action.
 
 #### 1.0.7
