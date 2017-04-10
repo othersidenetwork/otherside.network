@@ -1,77 +1,22 @@
 #otherside-network-banner {
-    box-sizing: border-box;
-    width: 100%;
-    line-height: 28px;
-    font-family: sans-serif;
-    font-size: 12px;
-    background-color: #222;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0 3px;
-    margin-right: 10px;
-    border-top: solid rgb(204, 0, 0) 3px;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 28px;
+  font-family: sans-serif;
+  font-size: 12px;
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 3px;
+  margin-right: 10px;
+  border-top: solid #cc0000 2px;
 }
-
 #otherside-network-banner a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
-
-#otherside-network-banner > a:first-child {
-    font-weight: bold;
+#otherside-network-banner .otherside-network-title:after {
+  content: "";
 }
-
-#otherside-network-banner .otherside-network-banner-dropdown {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#otherside-network-banner .otherside-network-banner-dropdown span {
-    padding: 0 10px;
-}
-
-#otherside-network-banner .otherside-network-banner-category {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    left: 0;
-}
-
-#otherside-network-banner .otherside-network-banner-category p {
-    margin: 0;
-    padding: 0 10px;
-}
-
-#otherside-network-banner .otherside-network-banner-category p a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#otherside-network-banner .otherside-network-banner-dropdown:hover p:hover {
-    background-color: #cc0000;
-    transition-property: background-color;
-    transition-duration: .2s;
-}
-
-#otherside-network-banner .otherside-network-banner-category p:first-child {
-}
-
-#otherside-network-banner .otherside-network-banner-dropdown:hover {
-    background-color: #222;
-}
-
-#otherside-network-banner .otherside-network-banner-dropdown:hover {
-    background-color: #cc0000;
-    transition-property: background-color;
-    transition-duration: .2s;
-}
-
-#otherside-network-banner .otherside-network-banner-dropdown:hover .otherside-network-banner-category {
-    display: block;
-    background-color: #222;
+#otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
+  display: none;
 }

@@ -23,7 +23,6 @@ const REMOTE_JSON = "http://otherside.network/shows/json";
 if (!is_admin() && !is_network_admin() && (get_transient(LOADING) == null)) {
     $otherside_network_config = get_transient(JSON);
     if ($otherside_network_config === false || $otherside_network_config == "") {
-        error_log("otherside.network: json transient not found, fetching live data from " . REMOTE_JSON . ".");
         set_transient(LOADING, true, 60);
         $otherside_network_config = file_get_contents(REMOTE_JSON);
         set_transient(JSON, $otherside_network_config, 30 * MINUTE_IN_SECONDS);

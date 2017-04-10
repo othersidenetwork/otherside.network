@@ -1,13 +1,15 @@
 <?php
 
+if ( !function_exists( 'otherside_banner' ) ) {
 function otherside_banner() {
 	global $otherside_network_config_object;
 	if ($otherside_network_config_object === false) {
 		return;
 	}
 ?>
-<div id="otherside-network-banner">
-	<a href="http://otherside.network">The Other Side Podcast Network :</a>
+<div id="otherside-network-banner" class="otherside-network-closed">
+	<a class="otherside-network-title" href="http://otherside.network">The Other Side Podcast Network : </a>
+	<span class="otherside-network-toggle">Our other shows</span>
 	<?php foreach ($otherside_network_config_object->categories as $key => $category) {?>
 	<div class="otherside-network-banner-dropdown">
 		<span><?php echo __($category->name, 'otherside_plugin_domain'); ?></span>
@@ -28,11 +30,14 @@ function otherside_banner() {
 </div>
 <?php
 }
+}
 
 add_action('wp_head', 'otherside_banner');
+
 if ( !function_exists( 'otherside_enqueue_scripts_and_styles' ) ) {
 	function otherside_enqueue_scripts_and_styles() {
 		wp_enqueue_style('otherside-banner', plugin_dir_url(__FILE__) . '../css/banner.css', false, '1.0', 'all');
+		wp_enqueue_script('otherside-script', plugin_dir_url(__FILE__) . '../js/banner.js', [ 'jquery' ], false, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'otherside_enqueue_scripts_and_styles' );
