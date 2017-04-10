@@ -41,7 +41,7 @@ add_action('wp_head', 'otherside_banner');
 if ( !function_exists( 'otherside_enqueue_scripts_and_styles' ) ) {
 	function otherside_enqueue_scripts_and_styles() {
 		wp_enqueue_style('otherside-banner', plugin_dir_url(__FILE__) . '../css/banner.css', false, '1.0', 'all');
-		wp_enqueue_script('otherside-script', plugin_dir_url(__FILE__) . '../js/banner.js', [ 'jquery' ], false, true );
+		wp_enqueue_script('otherside-script', plugin_dir_url(__FILE__) . '../js/banner.js', array( 'jquery' ), false, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'otherside_enqueue_scripts_and_styles' );

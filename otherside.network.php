@@ -3,7 +3,7 @@
 Plugin Name:       Tools from the Other Side
 Plugin URI:        https://github.com/othersidenetwork/otherside.network
 Description:       Tools and widgets for members of The Other Side Podcast Network.
-Version:           1.0.11
+Version:           1.0.12
 Require WP:        4.7.3
 Require PHP:       5.3.0
 Author:            Yannick Mauray

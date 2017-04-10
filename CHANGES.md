@@ -1,4 +1,7 @@
-#### 1.0.10
+#### 1.0.12
+* Changed usage of [ ... ] to array( ... ) to suit "not so new" verion of PHP.
+
+#### 1.0.11
 * Completely redesigned the CSS (now using LESS) to make the banner responsive.
 
 #### 1.0.10
