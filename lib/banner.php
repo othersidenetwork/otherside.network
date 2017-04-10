@@ -8,8 +8,10 @@ function otherside_banner() {
 	}
 ?>
 <div id="otherside-network-banner" class="otherside-network-closed">
-	<a class="otherside-network-title" href="http://otherside.network">The Other Side Podcast Network : </a>
-	<span class="otherside-network-toggle">Our other shows</span>
+	<div id="otherside-network-title-wrapper">
+		<a class="otherside-network-title" href="http://otherside.network">The Other Side Podcast Network : </a>
+		<span class="otherside-network-toggle">Our other shows</span>
+	</div>
 	<?php foreach ($otherside_network_config_object->categories as $key => $category) {?>
 	<div class="otherside-network-banner-dropdown">
 		<span><?php echo __($category->name, 'otherside_plugin_domain'); ?></span>
@@ -22,7 +24,7 @@ function otherside_banner() {
 				'utm_medium' => 'network',
 				'utm_content' => 'banner'
 			), $url);?>
-			<p><a href="<?php echo $url; ?>"><?php echo $otherside_network_config_object->podcasts->$podcast->name; ?></a></p>
+			<p><a href="<?php echo $url; ?>"><span class="otherside-network-link"><?php echo $otherside_network_config_object->podcasts->$podcast->name; ?></span></a></p>
 			<?php } ?>
 		</div>
 	</div>

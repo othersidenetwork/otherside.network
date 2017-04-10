@@ -3,26 +3,45 @@
     width: 100%;
     line-height: 28px;
     font-family: sans-serif;
+    font-weight: 700;
     font-size: 12px;
     background-color: #222;
     color: rgba(255, 255, 255, 0.8);
     padding: 0 3px;
     margin-right: 10px;
     border-top: solid rgb(204, 0, 0) 2px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 400px) {
+        flex-direction: row;
+    }
+
     a {
         text-decoration: none;
         color: inherit;
     }
 
-
-    &.otherside-network-closed .otherside-network-banner-dropdown {
-        display: none;
+    .otherside-network-toggle {
         @media screen and (min-width: 400px) {
-            display: initial;
+            display: none;
         }
     }
 
+    &.otherside-network-closed {
+        .otherside-network-banner-dropdown {
+            display: none;
+            @media screen and (min-width: 400px) {
+                display: initial;
+            }
+        }
+    }
+
+    .otherside-network-banner-dropdown,
     .otherside-network-banner-category {
-        display: none;
+        line-height: 1em;
+    }
+
+    .otherside-network-banner-category {
+        padding-left: 1rem;
     }
 }
