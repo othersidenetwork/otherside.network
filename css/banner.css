@@ -14,9 +14,14 @@
   text-decoration: none;
   color: inherit;
 }
-#otherside-network-banner .otherside-network-title:after {
-  content: "";
-}
 #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
+  display: none;
+}
+@media screen and (min-width: 400px) {
+  #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
+    display: initial;
+  }
+}
+#otherside-network-banner .otherside-network-banner-category {
   display: none;
 }
