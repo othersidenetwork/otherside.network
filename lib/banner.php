@@ -9,26 +9,28 @@ function otherside_banner() {
 ?>
 <div id="otherside-network-banner" class="otherside-network-closed">
 	<div id="otherside-network-title-wrapper">
-		<a class="otherside-network-title" href="http://otherside.network">The Other Side Podcast Network : </a>
+		<a class="otherside-network-title" href="http://otherside.network">The Other Side Podcast Network&nbsp;:&nbsp;</a>
 		<span class="otherside-network-toggle">Our other shows</span>
 	</div>
-	<?php foreach ($otherside_network_config_object->categories as $key => $category) {?>
-	<div class="otherside-network-banner-dropdown">
-		<span><?php echo __($category->name, 'otherside_plugin_domain'); ?></span>
-		<div class="otherside-network-banner-category">
-			<?php foreach ($category->podcasts as $subkey => $podcast) {
-			$url = $otherside_network_config_object->podcasts->$podcast->url;
-			$url = add_query_arg(array(
-				'utm_campaign' => 'syndication',
-				'utm_source' => sanitize_title(get_bloginfo('name', 'display')),
-				'utm_medium' => 'network',
-				'utm_content' => 'banner'
-			), $url);?>
-			<p><a href="<?php echo $url; ?>"><span class="otherside-network-link"><?php echo $otherside_network_config_object->podcasts->$podcast->name; ?></span></a></p>
-			<?php } ?>
+	<div id="otherside-network-banner-dropdown-wrapper">
+		<?php foreach ($otherside_network_config_object->categories as $key => $category) {?>
+		<div class="otherside-network-banner-dropdown">
+			<span><?php echo __($category->name, 'otherside_plugin_domain'); ?></span>
+			<div class="otherside-network-banner-category">
+				<?php foreach ($category->podcasts as $subkey => $podcast) {
+				$url = $otherside_network_config_object->podcasts->$podcast->url;
+				$url = add_query_arg(array(
+					'utm_campaign' => 'syndication',
+					'utm_source' => sanitize_title(get_bloginfo('name', 'display')),
+					'utm_medium' => 'network',
+					'utm_content' => 'banner'
+				), $url);?>
+				<p><a href="<?php echo $url; ?>"><span class="otherside-network-link"><?php echo $otherside_network_config_object->podcasts->$podcast->name; ?></span></a></p>
+				<?php } ?>
+			</div>
 		</div>
+		<?php } ?>
 	</div>
-	<?php } ?>
 </div>
 <?php
 }

@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 480px) {
   #otherside-network-banner {
     flex-direction: row;
   }
@@ -22,7 +22,7 @@
   text-decoration: none;
   color: inherit;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 480px) {
   #otherside-network-banner .otherside-network-toggle {
     display: none;
   }
@@ -30,15 +30,71 @@
 #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
   display: none;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 480px) {
   #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
-    display: initial;
+    display: inline-block;
+    cursor: pointer;
+  }
+  #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown:hover {
+    background-color: #cc0000;
+    transition-property: background-color;
+    transition-duration: .2s;
+  }
+  #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown:hover .otherside-network-banner-category {
+    display: block;
+    background-color: #222222;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    min-width: 130px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown:hover .otherside-network-banner-category p:hover {
+    background-color: #cc0000;
+    transition-property: background-color;
+    transition-duration: .2s;
   }
 }
-#otherside-network-banner .otherside-network-banner-dropdown,
-#otherside-network-banner .otherside-network-banner-category {
+#otherside-network-banner .otherside-network-banner-dropdown {
   line-height: 1em;
+  padding-top: 1em;
+}
+@media screen and (min-width: 480px) {
+  #otherside-network-banner .otherside-network-banner-dropdown {
+    position: relative;
+    line-height: 28px;
+    padding: 0;
+  }
+  #otherside-network-banner .otherside-network-banner-dropdown > span {
+    margin: 0 10px;
+  }
 }
 #otherside-network-banner .otherside-network-banner-category {
+  line-height: 1em;
   padding-left: 1rem;
+}
+#otherside-network-banner .otherside-network-banner-category > p {
+  margin: 9px 0;
+}
+@media screen and (min-width: 480px) {
+  #otherside-network-banner .otherside-network-banner-category > p {
+    margin: 0;
+    padding: 0 10px;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 480px) {
+  #otherside-network-banner .otherside-network-banner-category {
+    display: none;
+    padding-left: 0;
+  }
+}
+#otherside-network-banner .otherside-network-link::before {
+  content: "- ";
+}
+@media screen and (min-width: 480px) {
+  #otherside-network-banner .otherside-network-link::before {
+    content: "";
+  }
 }

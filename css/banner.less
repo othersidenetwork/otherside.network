@@ -12,7 +12,7 @@
     border-top: solid rgb(204, 0, 0) 2px;
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 400px) {
+    @media screen and (min-width: 480px) {
         flex-direction: row;
     }
 
@@ -22,7 +22,7 @@
     }
 
     .otherside-network-toggle {
-        @media screen and (min-width: 400px) {
+        @media screen and (min-width: 480px) {
             display: none;
         }
     }
@@ -30,18 +30,71 @@
     &.otherside-network-closed {
         .otherside-network-banner-dropdown {
             display: none;
-            @media screen and (min-width: 400px) {
-                display: initial;
+            @media screen and (min-width: 480px) {
+                display: inline-block;
+                cursor: pointer;
+                &:hover {
+                    background-color: #cc0000;
+                    transition-property: background-color;
+                    transition-duration: .2s;          
+                    .otherside-network-banner-category {
+                        display: block;
+                        background-color: #222222;
+                        position: absolute;
+                        left: 0;
+                        top: 28px;
+                        min-width: 130px;
+                        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                        z-index: 1000;
+                        p {
+                            &:hover {
+                                background-color: #cc0000;
+                                transition-property: background-color;
+                                transition-duration: .2s;                                
+                            }
+                        }                   
+                    }
+                }
             }
         }
     }
 
-    .otherside-network-banner-dropdown,
-    .otherside-network-banner-category {
+    .otherside-network-banner-dropdown {
         line-height: 1em;
+        padding-top: 1em;
+        @media screen and (min-width: 480px) {
+            & > span {
+                margin: 0 10px;
+            }
+            position: relative;
+            line-height: 28px;
+            padding: 0;
+        }
     }
 
     .otherside-network-banner-category {
+        line-height: 1em;
         padding-left: 1rem;
+        & > p {
+            margin: 9px 0;
+            @media screen and (min-width: 480px) {
+                margin: 0;
+                padding: 0 10px;
+                line-height: 28px;
+            }
+        }
+        @media screen and (min-width: 480px) {
+            display: none;
+            padding-left: 0;
+        }
+    }
+
+    .otherside-network-link {
+        &::before {
+            content: "- ";
+            @media screen and (min-width: 480px) {
+                content: "";
+            }
+        }
     }
 }
