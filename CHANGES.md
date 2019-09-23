@@ -1,3 +1,6 @@
+#### 1.0.13
+* Fixed #2 : Longer show names get wrapped in the top bar.
+
 #### 1.0.12
 * Changed usage of [ ... ] to array( ... ) to suit "not so new" verion of PHP.
 
