@@ -90,6 +90,9 @@
     padding-left: 0;
   }
 }
+#otherside-network-banner .otherside-network-link {
+  white-space: nowrap;
+}
 #otherside-network-banner .otherside-network-link::before {
   content: "- ";
 }
@@ -98,3 +101,4 @@
     content: "";
   }
 }
+/*# sourceMappingURL=./banner.css.map */
