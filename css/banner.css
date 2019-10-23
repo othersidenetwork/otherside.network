@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner {
     flex-direction: row;
   }
@@ -22,7 +22,7 @@
   text-decoration: none;
   color: inherit;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner .otherside-network-toggle {
     display: none;
   }
@@ -30,7 +30,7 @@
 #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
   display: none;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner.otherside-network-closed .otherside-network-banner-dropdown {
     display: inline-block;
     cursor: pointer;
@@ -60,7 +60,7 @@
   line-height: 1em;
   padding-top: 1em;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner .otherside-network-banner-dropdown {
     position: relative;
     line-height: 28px;
@@ -77,14 +77,14 @@
 #otherside-network-banner .otherside-network-banner-category > p {
   margin: 9px 0;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner .otherside-network-banner-category > p {
     margin: 0;
     padding: 0 10px;
     line-height: 28px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner .otherside-network-banner-category {
     display: none;
     padding-left: 0;
@@ -96,7 +96,7 @@
 #otherside-network-banner .otherside-network-link::before {
   content: "- ";
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 496px) {
   #otherside-network-banner .otherside-network-link::before {
     content: "";
   }
